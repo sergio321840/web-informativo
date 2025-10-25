@@ -1,146 +1,423 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cursos de Refuerzo - Matemáticas, Química y Física</title>
-  <meta name="description" content="Clases particulares y refuerzo en Matemáticas, Química y Física. Modalidad presencial y online. Responsive y contacto directo.">
-  <style>
-    :root{--accent:#2b6cb0;--muted:#6b7280;--bg:#f8fafc;--card:#ffffff}
-    *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a}
-    header{background:linear-gradient(90deg,#1e3a8a 0%, #2563eb 100%); color:white; padding:2rem 1rem}
-    .container{max-width:1100px;margin:0 auto;padding:1rem}
-    .hero{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
-    .hero h1{margin:0;font-size:1.6rem}
-    .hero p{margin:.5rem 0;color:rgba(255,255,255,.9)}
-    .cta{margin-top:.5rem}
-    .btn{background:white;color:var(--accent);padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600}
-    main{padding:2rem 1rem}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-    .card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 6px 20px rgba(2,6,23,0.08)}
-    h2{margin:0 0 .5rem 0}
-    .muted{color:var(--muted);font-size:.95rem}
-    ul{padding-left:1rem}
-    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
-    @media (max-width:720px){.contact-grid{grid-template-columns:1fr}}
-    footer{padding:1rem;background:#0b1220;color:#d1d5db;text-align:center;font-size:.9rem}
-    .refcodes{font-family:monospace;background:#f1f5f9;padding:.5rem;border-radius:6px;display:inline-block}
-    form input, form textarea{width:100%;padding:.6rem;border:1px solid #e6edf3;border-radius:8px;margin-bottom:.6rem}
-    form button{background:var(--accent);color:white;border:none;padding:.6rem 1rem;border-radius:8px;font-weight:600}
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container hero">
-      <div style="flex:1;min-width:220px">
-        <h1>Cursos de Refuerzo — Matemáticas, Química y Física</h1>
-        <p>Clases personalizadas para secundaria y universidad. Modalidad presencial y online. Profesores con experiencia, materiales y seguimiento.</p>
-        <div class="cta">
-          <a class="btn" href="#contact">Contactar ahora</a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Refuerzo STEM — Matemáticas, Química y Física</title>
+    <meta name="description" content="Clases particulares y refuerzo en Matemáticas, Química y Física. Modalidad presencial y online.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230ea5e9'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' font-family='Poppins, Arial' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+      :root{--bg:#f6f9fc;--card:#fff;--muted:#667085;--accent:#0ea5e9;--accent-2:#7dd3fc;--dark:#061226}
+      *{box-sizing:border-box}
+      body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;color:var(--dark);background:var(--bg);-webkit-font-smoothing:antialiased}
+      a{color:var(--accent)}
+      .container{max-width:1100px;margin:0 auto;padding:1rem}
+
+      /* NAV */
+      nav{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem}
+      .logo{display:flex;align-items:center;gap:.6rem;font-weight:700}
+      .logo svg{width:40px;height:40px}
+
+      /* HERO */
+      header.hero{background-image:linear-gradient(180deg, rgba(6,11,38,0.6), rgba(6,11,38,0.25)), url('https://images.unsplash.com/photo-1526378728340-78a6f0b27c2f?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;color:white;padding:3rem 0;border-bottom:6px solid rgba(14,165,233,0.06)}
+      .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:1.2rem;align-items:center}
+      @media (max-width:880px){.hero-grid{grid-template-columns:1fr;padding:0 1rem}}
+      .brand{font-family:Poppins,Inter,sans-serif;font-size:1.05rem}
+      .hero h1{margin:0;font-size:2.6rem;line-height:1.02}
+      .hero .subtitle{margin:.6rem 0 0;color:rgba(255,255,255,.93);max-width:66ch;font-size:1.05rem}
+      .hero .actions{margin-top:1rem}
+      .btn{display:inline-block;background:var(--accent);color:white;padding:.75rem 1.1rem;border-radius:12px;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(14,165,233,0.12);transition:transform .16s,box-shadow .16s}
+      .btn:hover{transform:translateY(-4px);box-shadow:0 22px 40px rgba(14,165,233,0.16)}
+      .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.16);margin-left:.6rem}
+
+      /* MAIN / CARDS */
+      main{padding:2rem 1rem 3rem}
+      .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+      @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+      @media (max-width:640px){.grid{grid-template-columns:1fr}}
+      .card{background:var(--card);padding:1.3rem;border-radius:14px;box-shadow:0 18px 40px rgba(2,6,23,0.06);transition:transform .18s,box-shadow .18s}
+      .card:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(2,6,23,0.08)}
+      .card-top{display:flex;align-items:center;gap:.8rem;margin-bottom:.4rem}
+      .card h3{margin:0;font-size:1.05rem}
+      .card p{color:var(--muted);margin:.5rem 0}
+      .section-title{font-size:1.15rem;margin:0 0 .6rem 0;display:flex;align-items:center;gap:.6rem}
+      .section-title:after{content:"";flex:1;height:6px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px;opacity:.18}
+
+      /* small icons */
+      .icon{width:52px;height:52px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#f3fbff,#eefbff);border-radius:12px}
+
+      /* Features */
+      .features{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+      .feature{background:linear-gradient(180deg,#f8fdff,#f1fbff);padding:.9rem;border-radius:12px;flex:1;min-width:200px}
+
+      /* CONTACT */
+      .contact-area{display:grid;grid-template-columns:1fr 380px;gap:1rem;margin-top:1.2rem}
+      @media (max-width:860px){.contact-area{grid-template-columns:1fr}}
+      form{display:flex;flex-direction:column}
+      input,textarea,select{padding:.8rem;border:1px solid #e6eef6;border-radius:10px;margin-bottom:.6rem;font-size:1rem}
+      textarea{min-height:120px}
+      button[type=submit]{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:none;padding:.75rem;border-radius:10px;font-weight:700}
+
+      /* TESTIMONIALS */
+      .testimonials{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
+      @media (max-width:800px){.testimonials{grid-template-columns:1fr}}
+
+      /* FOOTER */
+      footer{padding:1.2rem;background:#fff;border-top:1px solid #eef2f7;text-align:center;color:var(--muted);font-size:.9rem}
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="container">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect x="1" y="1" width="22" height="22" rx="5" fill="#0ea5e9"/>
+            <path d="M7 13h10M7 9h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Refuerzo STEM</span>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:center">
+          <a href="#cursos" style="color:white;opacity:.95">Cursos</a>
+          <a href="#contact" class="btn" style="padding:.45rem .8rem;border-radius:8px">Contactar</a>
+            <a class="btn" href="paginadeinfomacion.html" style="background:transparent;color:white;border:1px solid rgba(255,255,255,.18);margin-left:.6rem">Más info</a>
+        </div>
+      </nav>
+
+      <div class="container hero-grid">
+        <div>
+          <div class="brand badge">Refuerzo STEM</div>
+          <h1>Domina Matemáticas, Química y Física con clases personalizadas</h1>
+          <p class="subtitle">Profesores con experiencia, seguimiento personalizado y material propio. Modalidad online y presencial. Reserva tu clase de prueba.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">Reservar clase</a>
+            <a class="btn ghost" href="#cursos">Ver cursos</a>
+          </div>
+        </div>
+
+        <div style="text-align:right;color:rgba(255,255,255,.95)">
+          <p style="margin:0;">Atención rápida por WhatsApp</p>
+          <p style="font-size:1.05rem;font-weight:700;margin:.25rem 0"><a href="tel:+34123456789" style="color:inherit;text-decoration:underline">+34 123 456 789</a></p>
+          <p style="margin:.15rem 0"><a href="https://wa.me/34123456789" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Abrir WhatsApp</a></p>
+          <p style="margin-top:.6rem;opacity:.92">Horario: Lun-Vie 10:00 - 20:00</p>
         </div>
       </div>
-      <div style="min-width:200px;text-align:right">
-        <p class="muted">Atención por WhatsApp y teléfono</p>
-        <p style="font-weight:700;margin:.2rem 0">Tel: <a href="tel:+34123456789" style="color:white;text-decoration:underline">+34 123 456 789</a></p>
-        <p style="font-weight:700;margin:.2rem 0">WhatsApp: <a href="https://wa.me/34123456789" target="_blank" rel="noopener" style="color:white;text-decoration:underline">Abrir chat</a></p>
-        <p class="muted" style="font-size:.85rem;margin-top:.6rem">Horario: Lun-Vie 10:00 - 20:00</p>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="container">
-    <section class="grid">
-      <article class="card">
-        <h2>Matemáticas</h2>
-        <p class="muted">Álgebra, Cálculo, Geometría, Estadística y preparación para exámenes.</p>
-        <ul>
-          <li>Clases individuales y grupales</li>
-          <li>Material descargable y ejercicios</li>
-          <li>Seguimiento y tutorías semanales</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h2>Química</h2>
-        <p class="muted">Química general, orgánica e inorgánica, prácticas y resolución de problemas.</p>
-        <ul>
-          <li>Laboratorios virtuales y prácticas guiadas</li>
-          <li>Preparación para selectividad y pruebas universitarias</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h2>Física</h2>
-        <p class="muted">Mecánica, termodinámica, electromagnetismo y óptica con enfoque en problemas.</p>
-        <ul>
-          <li>Explicaciones paso a paso</li>
-          <li>Clases con pizarra y simulaciones</li>
-        </ul>
-      </article>
-    </section>
+    <main class="container">
+      <section id="cursos">
+        <div class="section-title">Nuestros cursos</div>
+        <div class="grid" style="margin-top:0.8rem">
+          <article class="card">
+            <div class="card-top">
+              <div class="icon" aria-hidden>
+                <!-- math icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18" stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round"/><path d="M7 7l4 10" stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <h3>Matemáticas</h3>
+            </div>
+            <p>Álgebra, Cálculo y Estadística. Clases enfocadas a método, práctica y exámenes.</p>
+            <p class="small">Individual y grupal; ejercicios con soluciones paso a paso.</p>
+          </article>
 
-    <section style="margin-top:1rem" class="card">
-      <h2>Precios orientativos</h2>
-      <p class="muted">Tarifas por hora. Consulta paquetes mensuales con descuento.</p>
-      <ul>
-        <li>Clase individual: 20€ / hora</li>
-        <li>Clase grupal (3-5): 12€ / hora por persona</li>
-        <li>Paquete intensivo (10h): 180€</li>
-      </ul>
-    </section>
+          <article class="card">
+            <div class="card-top">
+              <div class="icon" aria-hidden>
+                <!-- chemistry icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3v6a6 6 0 006 6 6 6 0 006-6V3" stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Química</h3>
+            </div>
+            <p>Química general y orgánica. Prácticas guiadas y resolución de problemas.</p>
+            <p class="small">Preparación para selectividad y tests universitarios.</p>
+          </article>
 
-    <section id="contact" style="margin-top:1rem">
-      <div class="contact-grid">
+          <article class="card">
+            <div class="card-top">
+              <div class="icon" aria-hidden>
+                <!-- physics icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20" stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round"/><path d="M5 12h14" stroke="#0ea5e9" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <h3>Física</h3>
+            </div>
+            <p>Mecánica, electromagnetismo y óptica con enfoque práctico y ejercicios.</p>
+            <p class="small">Apoyo para exámenes y prácticas de laboratorio.</p>
+          </article>
+        </div>
+      </section>
+
+      <section style="margin-top:1.1rem">
+        <div class="card">
+          <h3>Precios orientativos</h3>
+          <p class="small">Tarifas por hora. Consulta paquetes y descuentos.</p>
+          <ul>
+            <li>Clase individual: 20€ / hora</li>
+            <li>Clase grupal (3-5): 12€ / hora por persona</li>
+            <li>Paquete intensivo (10h): 180€</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact-area" id="contact">
         <div>
-          <h2>Contacto</h2>
-          <p class="muted">Escríbenos o llama para reservar tu plaza. Respuesta rápida por WhatsApp.</p>
-          <p><strong>Teléfono:</strong> <a href="tel:+34123456789">+34 123 456 789</a></p>
-          <p><strong>Email:</strong> <a href="mailto:info@tuscursos.example">info@tuscursos.example</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/34123456789" target="_blank" rel="noopener">+34 123 456 789</a></p>
-
-          <h3 style="margin-top:.8rem">Códigos de referencia</h3>
-          <p class="muted">Usa estos códigos al contactar para identificar el curso o la oferta (ejemplos, no son IMEIs reales):</p>
-          <div class="refcodes">
-            MAT-REF-2025-01<br>
-            QUI-REF-2025-02<br>
-            FIS-REF-2025-03
+          <div class="card">
+            <h3>Reservas & Precios</h3>
+            <p class="small">Tarifas orientativas. Pregunta por descuentos en paquetes.</p>
+            <ul>
+              <li>Clase individual: 20€ / hora</li>
+              <li>Grupal (3-5): 12€ / hora por persona</li>
+              <li>Paquete intensivo (10h): 180€</li>
+            </ul>
+            <h4 style="margin-top:.6rem">Códigos de referencia</h4>
+            <p class="small" style="font-family:monospace;background:#fbfdff;padding:.4rem;border-radius:6px;display:inline-block">MAT-REF-2025-01 • QUI-REF-2025-02 • FIS-REF-2025-03</p>
           </div>
-          <p style="margin-top:.6rem;color:#7b8794;font-size:.9rem">Nota: no compartas IMEIs ni identificadores sensibles públicamente. Aquí mostramos códigos de referencia para gestión interna.</p>
+
+          <div class="card" style="margin-top:1rem">
+            <h3>Opiniones</h3>
+            <div class="testimonials">
+              <div>
+                <p style="font-style:italic">"Excelente explicación, aprobé el examen gracias a las sesiones de refuerzo"</p>
+                <p class="small">— Laura, Bachillerato</p>
+              </div>
+              <div>
+                <p style="font-style:italic">"Muy buen seguimiento y ejercicios claros."</p>
+                <p class="small">— Carlos, 1º uni</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <aside class="card">
           <h3>Formulario rápido</h3>
-          <p class="muted">Envía tu solicitud y te responderemos por WhatsApp o email.</p>
-          <!-- Reemplaza la URL de action por la de Formspree u otro servicio (ej: https://formspree.io/f/XXXXX) -->
+          <p class="small">Rellena y te contactamos por WhatsApp o email.</p>
           <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <label for="name" class="muted">Nombre</label>
-            <input id="name" name="name" type="text" required placeholder="Tu nombre">
-            <label for="email" class="muted">Email</label>
-            <input id="email" name="email" type="email" required placeholder="tu@email.com">
-            <label for="phone" class="muted">Teléfono</label>
-            <input id="phone" name="phone" type="tel" placeholder="+34 6xx xxx xxx">
-            <label for="course" class="muted">Curso de interés</label>
-            <input id="course" name="course" type="text" placeholder="Matemáticas / Química / Física">
-            <label for="message" class="muted">Mensaje</label>
-            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos tu necesidad"></textarea>
-            <button type="submit">Enviar solicitud</button>
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Teléfono (opcional)">
+            <select name="course">
+              <option value="">Selecciona curso...</option>
+              <option>Matemáticas</option>
+              <option>Química</option>
+              <option>Física</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="Mensaje / disponibilidad"></textarea>
+            <button type="submit">Enviar</button>
           </form>
-          <p class="muted" style="font-size:.85rem;margin-top:.6rem">Al enviar, el servicio externo tratará tu solicitud y nos la reenviará por email. Reemplaza la URL del atributo action por la de tu servicio (Formspree, Getform, etc.).</p>
+          <p class="small" style="margin-top:.6rem">Pega aquí tu ID de Formspree y lo configuro por ti.</p>
         </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div>© 2025 Refuerzo STEM</div>
+        <div style="display:flex;gap:.6rem;align-items:center">
+          <a href="#" aria-label="Facebook" style="color:var(--muted)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2v-2.9h2.2V9.4c0-2.2 1.3-3.5 3.3-3.5.95 0 1.95.17 1.95.17v2.2h-1.12c-1.1 0-1.44.68-1.44 1.38v1.66h2.45l-.39 2.9h-2.06v7A10 10 0 0022 12z" stroke="currentColor" stroke-width="0" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Instagram" style="color:var(--muted)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.2"/></svg></a>
+        </div>
       </div>
-    </section>
+    </footer>
+  </body>
+</html>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cursos de Refuerzo • Matemáticas, Química y Física</title>
+    <meta name="description" content="Clases particulares y refuerzo en Matemáticas, Química y Física. Modalidad presencial y online. Reserva tu clase de prueba.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230ea5e9'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' font-family='Poppins, Arial' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bg:#f6f9fc; --card:#ffffff; --muted:#667085; --accent:#0ea5e9; --dark:#0b1220;
+      }
+      *{box-sizing:border-box}
+      body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color:var(--dark);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.45}
+      a{color:var(--accent);text-decoration:none}
+      .container{max-width:1100px;margin:0 auto;padding:1rem}
 
-    <section style="margin-top:1rem" class="card">
-      <h2>Cómo reservar</h2>
-      <ol>
-        <li>Contacta por WhatsApp o teléfono indicando el curso y código de referencia.</li>
-        <li>Reserva una clase de prueba (30 min).</li>
-        <li>Contrata paquete o clases sueltas según tus necesidades.</li>
-      </ol>
-    </section>
-  </main>
+      /* Nav */
+      nav{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem}
+      .logo{display:flex;align-items:center;gap:.6rem;font-weight:700}
+      .logo svg{width:36px;height:36px}
 
-  <footer>
-    © 2025 Cursos de Refuerzo • Hecho con HTML y CSS — Responsive para móvil
-  </footer>
-</body>
+      /* Header / Hero */
+      header.hero{
+        background-image:linear-gradient(180deg, rgba(6,11,38,0.6), rgba(6,11,38,0.28)), url('https://images.unsplash.com/photo-1523227573206-1f534c0cf3de?auto=format&fit=crop&w=1400&q=80');
+        background-size:cover;background-position:center;color:white;padding:3.2rem 0 2.2rem;border-bottom:4px solid rgba(14,165,233,0.08)
+      }
+      .hero-grid{display:grid;grid-template-columns:1fr 320px;gap:1.25rem;align-items:center}
+      @media (max-width:800px){.hero-grid{grid-template-columns:1fr;padding:0 1rem}}
+      .brand{font-family:Poppins, Inter, sans-serif;font-size:1.05rem;letter-spacing:.2px}
+      .hero h1{margin:0;font-size:2rem;line-height:1.05}
+      .hero p{margin:.6rem 0 0;color:rgba(255,255,255,.92);max-width:56ch}
+      .hero .actions{margin-top:1rem}
+      .btn{display:inline-block;background:var(--accent);color:white;padding:.7rem 1.1rem;border-radius:12px;text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(14,165,233,0.14);transition:transform .16s ease,box-shadow .16s}
+      .btn:hover{transform:translateY(-4px);box-shadow:0 18px 30px rgba(14,165,233,0.18)}
+      .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.18);margin-left:.6rem}
+
+      /* Cards */
+      main{padding:2rem 1rem 3rem}
+      .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+      @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+      @media (max-width:640px){.grid{grid-template-columns:1fr}}
+      .card{background:var(--card);padding:1.2rem;border-radius:14px;box-shadow:0 12px 40px rgba(2,6,23,0.06);transition:transform .18s ease,box-shadow .18s}
+      .card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(2,6,23,0.08)}
+      .card h3{margin:.2rem 0 0;font-size:1.06rem}
+      .card p{color:var(--muted);margin:.5rem 0}
+
+      .icon{width:46px;height:46px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#f3fbff,#eefbff);border-radius:12px;margin-right:.6rem}
+
+      .features{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+      .feature{background:linear-gradient(180deg,#f8fdff,#f1fbff);padding:.9rem;border-radius:12px;flex:1;min-width:200px;box-shadow:inset 0 -1px 0 rgba(14,165,233,0.06)}
+
+      /* Contact area */
+      .contact-area{display:grid;grid-template-columns:1fr 360px;gap:1rem;margin-top:1.2rem}
+      @media (max-width:860px){.contact-area{grid-template-columns:1fr}}
+      form{display:flex;flex-direction:column}
+      input,textarea,select{padding:.75rem;border:1px solid #e6eef6;border-radius:10px;margin-bottom:.6rem;font-size:1rem}
+      textarea{min-height:110px}
+      .small{font-size:.9rem;color:var(--muted)}
+
+      .meta{display:flex;gap:.8rem;align-items:center;margin-top:.8rem}
+
+      footer{padding:1.2rem;background:white;border-top:1px solid #eef2f7;text-align:center;color:var(--muted);font-size:.9rem}
+
+      /* Badges */
+      .badge{display:inline-flex;align-items:center;gap:.6rem;background:#0ea5e920;padding:.35rem .6rem;border-radius:999px;font-weight:600;color:var(--accent)}
+
+      /* Testimonials */
+      .testimonials{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
+      @media (max-width:800px){.testimonials{grid-template-columns:1fr}}
+      .quote{font-style:italic;color:var(--muted)}
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="container">
+        <div class="logo">
+          <!-- simple SVG logo -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="1" width="22" height="22" rx="5" fill="#0ea5e9"/>
+            <path d="M7 13h10M7 9h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Refuerzo STEM</span>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:center">
+          <a href="#cursos" style="color:white;opacity:.95">Cursos</a>
+          <a href="#contact" class="btn" style="padding:.45rem .8rem;border-radius:8px">Contactar</a>
+        </div>
+      </nav>
+      <div class="container hero-grid">
+        <div>
+          <div class="brand badge">Refuerzo STEM</div>
+          <h1>Domina Matemáticas, Química y Física con clases personalizadas</h1>
+          <p>Profesores con experiencia, explicación paso a paso, ejercicios resueltos y seguimiento. Clases online o presenciales. Reservas flexibles.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">Reservar clase</a>
+            <a class="btn ghost" href="#cursos">Ver cursos</a>
+          </div>
+        </div>
+        <div style="text-align:right;color:rgba(255,255,255,.95)">
+          <p class="small">Atención rápida por WhatsApp</p>
+          <p style="font-size:1.05rem;font-weight:700;margin:.25rem 0"><a href="tel:+34123456789" style="color:inherit;text-decoration:underline">+34 123 456 789</a></p>
+          <p style="margin:.15rem 0"><a href="https://wa.me/34123456789" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Abrir WhatsApp</a></p>
+          <p class="small" style="margin-top:.6rem">Horario: Lun-Vie 10:00 - 20:00</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="cursos" class="grid">
+        <article class="card">
+          <h3>Matemáticas</h3>
+          <p>Álgebra, Cálculo, Geometría y Estadística. Clases enfocadas a entender el método y practicar.</p>
+          <p class="small">Ideal para secundaria, bachillerato y universidad.</p>
+        </article>
+        <article class="card">
+          <h3>Química</h3>
+          <p>Química general y orgánica: teoría clara, problemas, prácticas virtuales y experimentos guiados.</p>
+          <p class="small">Preparación para selectividad y carreras científicas.</p>
+        </article>
+        <article class="card">
+          <h3>Física</h3>
+          <p>Mecánica, termodinámica, electromagnetismo y óptica con enfoque práctico y resolución de problemas.</p>
+          <p class="small">Apoyo para exámenes y trabajos de laboratorio.</p>
+        </article>
+      </section>
+
+      <section class="features" aria-labelledby="why">
+        <div class="feature card">
+          <strong>Profesorado experto</strong>
+          <p class="small">Profesores titulados con experiencia en enseñanza y exámenes.</p>
+        </div>
+        <div class="feature card">
+          <strong>Material propio</strong>
+          <p class="small">Fichas, ejercicios y soluciones paso a paso.</p>
+        </div>
+        <div class="feature card">
+          <strong>Modo flexible</strong>
+          <p class="small">Clases online o presenciales, horarios adaptables.</p>
+        </div>
+      </section>
+
+      <section class="contact-area" id="contact">
+        <div>
+          <div class="card">
+            <h3>Reservas & Precios</h3>
+            <p class="small">Tarifas orientativas. Pregunta por descuentos en paquetes.</p>
+            <ul>
+              <li>Clase individual: 20€ / hora</li>
+              <li>Grupal (3-5): 12€ / hora por persona</li>
+              <li>Paquete intensivo (10h): 180€</li>
+            </ul>
+            <h4 style="margin-top:.6rem">Códigos de referencia (para reservas)</h4>
+            <p class="small" style="font-family:monospace;background:#fbfdff;padding:.4rem;border-radius:6px;display:inline-block">MAT-REF-2025-01 • QUI-REF-2025-02 • FIS-REF-2025-03</p>
+            <p class="small" style="margin-top:.6rem;color:#a1aab7">Nota: no compartas identificadores sensibles públicamente.</p>
+          </div>
+
+          <div class="card" style="margin-top:1rem">
+            <h3>Opiniones</h3>
+            <div class="testimonials">
+              <div>
+                <p class="quote">"Excelente explicación, aprobé el examen gracias a las sesiones de refuerzo"</p>
+                <p class="small">— Laura, Bachillerato</p>
+              </div>
+              <div>
+                <p class="quote">"Muy buen seguimiento y ejercicios claros."</p>
+                <p class="small">— Carlos, 1º uni</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>Formulario rápido</h3>
+          <p class="small">Rellena y te contactamos por WhatsApp o email.</p>
+          <!-- Reemplaza action por tu URL de Formspree o service elegido -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Teléfono (opcional)">
+            <select name="course">
+              <option value="">Selecciona curso...</option>
+              <option>Matemáticas</option>
+              <option>Química</option>
+              <option>Física</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="Mensaje / disponibilidad"></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+          <p class="small" style="margin-top:.6rem">Si necesitas que lo configure con tu Formspree, pégame aquí el ID y actualizo la URL.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        © 2025 Refuerzo STEM • Diseño responsive • Hecho con HTML y CSS
+      </div>
+    </footer>
+  </body>
 </html>
