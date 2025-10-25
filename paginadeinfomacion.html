@@ -1,275 +1,547 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Información — Clases Virtuales de Refuerzo</title>
-    <meta name="description" content="Información sobre clases virtuales de refuerzo en Matemáticas, Química y Física. También ofrecemos ayuda con tareas y seguimiento personalizado.">
-    <style>
-      :root{
-        --bg:#f0f7ff; --card:#ffffff; --muted:#64748b; --accent:#6366f1; --accent-2:#8b5cf6; --accent-3:#ec4899; --radius:16px;
-        --maxw:1100px;
-      }
+<!doctype html><!doctype html>
+
+<html lang="es"><html lang="es">
+
+  <head>  <head>
+
+    <meta charset="utf-8">    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Información — Clases Virtuales de Refuerzo</title>    <title>Información — Clases Virtuales de Refuerzo</title>
+
+    <meta name="description" content="Información sobre clases virtuales de refuerzo en Matemáticas, Química y Física. También ofrecemos ayuda con tareas y seguimiento personalizado.">    <meta name="description" content="Información sobre clases virtuales de refuerzo en Matemáticas, Química y Física. También ofrecemos ayuda con tareas y seguimiento personalizado.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">    <style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>      :root{
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">        --bg:#f0f7ff; --card:#ffffff; --muted:#64748b; --accent:#6366f1; --accent-2:#8b5cf6; --accent-3:#ec4899; --radius:16px;
+
+    <style>        --maxw:1100px;
+
+      :root{      }
+
+        --bg:#f0f7ff; --card:#ffffff; --muted:#64748b; --accent:#6366f1; --accent-2:#8b5cf6; --accent-3:#ec4899; --radius:16px;      *{box-sizing:border-box}
+
+        --maxw:1100px;      body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;background:linear-gradient(180deg, #e0eaff 0%, #f0f7ff 50%, #fef3ff 100%);color:#0f172a;-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
+
+      }      .wrap{max-width:var(--maxw);margin:0 auto;padding:1.2rem}
+
       *{box-sizing:border-box}
-      body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;background:linear-gradient(180deg, #e0eaff 0%, #f0f7ff 50%, #fef3ff 100%);color:#0f172a;-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}
-      .wrap{max-width:var(--maxw);margin:0 auto;padding:1.2rem}
 
-      /* HERO */
-      .hero{background:linear-gradient(135deg,#667eea 0%, #764ba2 100%);color:white;padding:4rem 1rem 3.5rem;border-radius:0 0 32px 32px;box-shadow:0 20px 60px rgba(102,126,234,0.3);position:relative;overflow:hidden}
+      body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;background:linear-gradient(180deg, #e0eaff 0%, #f0f7ff 50%, #fef3ff 100%);color:#0f172a;-webkit-font-smoothing:antialiased;line-height:1.5;min-height:100vh}      /* HERO */
+
+      .wrap{max-width:var(--maxw);margin:0 auto;padding:1.2rem}      .hero{background:linear-gradient(135deg,#667eea 0%, #764ba2 100%);color:white;padding:4rem 1rem 3.5rem;border-radius:0 0 32px 32px;box-shadow:0 20px 60px rgba(102,126,234,0.3);position:relative;overflow:hidden}
+
       .hero::before{content:"";position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.15),transparent);border-radius:50%}
-      .hero::after{content:"";position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.1),transparent);border-radius:50%}
-      .hero .inner{position:relative;z-index:1}
-      .hero h1{margin:0;font-size:2.2rem;line-height:1.05;font-weight:700}
-      .hero p{margin:.6rem 0 0;color:rgba(255,255,255,.93);max-width:58ch;font-size:1.05rem}
-      .hero .ctas{margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap}
-      @media (max-width:768px){
-        .hero{padding:3rem 1rem 2.5rem;border-radius:0 0 24px 24px}
-        .hero h1{font-size:1.8rem}
-        .hero p{font-size:1rem}
-      }
-      .btn{display:inline-block;background:white;color:var(--accent);padding:.7rem 1.2rem;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.12);transition:transform .2s,box-shadow .2s}
-      .btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,0.15)}
-      .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.25);color:white;box-shadow:none}
-      .btn.ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
-      @media (max-width:640px){
-        .btn{padding:.6rem 1rem;font-size:.92rem}
-      }
 
-      /* SECTIONS */
-      section{margin-top:1.5rem}
+      /* HERO */      .hero::after{content:"";position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.1),transparent);border-radius:50%}
+
+      .hero{background:linear-gradient(135deg,#667eea 0%, #764ba2 100%);color:white;padding:4rem 1rem 3.5rem;border-radius:0 0 32px 32px;box-shadow:0 20px 60px rgba(102,126,234,0.3);position:relative;overflow:hidden}      .hero .inner{position:relative;z-index:1}
+
+      .hero::before{content:"";position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.15),transparent);border-radius:50%}      .hero h1{margin:0;font-size:2.2rem;line-height:1.05;font-weight:700}
+
+      .hero::after{content:"";position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.1),transparent);border-radius:50%}      .hero p{margin:.6rem 0 0;color:rgba(255,255,255,.93);max-width:58ch;font-size:1.05rem}
+
+      .hero .inner{position:relative;z-index:1}      .hero .ctas{margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap}
+
+      .hero h1{margin:0;font-size:2.6rem;line-height:1.05;font-weight:700}      @media (max-width:768px){
+
+      .hero p{margin:.6rem 0 0;color:rgba(255,255,255,.93);max-width:58ch;font-size:1.2rem;font-weight:300}        .hero{padding:3rem 1rem 2.5rem;border-radius:0 0 24px 24px}
+
+      .hero .ctas{margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap}        .hero h1{font-size:1.8rem}
+
+      @media (max-width:768px){        .hero p{font-size:1rem}
+
+        .hero{padding:3rem 1rem 2.5rem;border-radius:0 0 24px 24px}      }
+
+        .hero h1{font-size:1.8rem}      .btn{display:inline-block;background:white;color:var(--accent);padding:.7rem 1.2rem;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.12);transition:transform .2s,box-shadow .2s}
+
+        .hero p{font-size:1rem}      .btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,0.15)}
+
+      }      .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.25);color:white;box-shadow:none}
+
+      .btn{display:inline-block;background:white;color:var(--accent);padding:.85rem 1.5rem;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.12);transition:transform .2s,box-shadow .2s;font-size:1.05rem}      .btn.ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
+
+      .btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,0.15)}      @media (max-width:640px){
+
+      .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.25);color:white;box-shadow:none}        .btn{padding:.6rem 1rem;font-size:.92rem}
+
+      .btn.ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}      }
+
+      @media (max-width:640px){
+
+        .btn{padding:.6rem 1rem;font-size:.92rem}      /* SECTIONS */
+
+      }      section{margin-top:1.5rem}
+
       .card{background:linear-gradient(135deg, #ffffff 0%, #fefbff 100%);padding:1.3rem;border-radius:var(--radius);box-shadow:0 10px 40px rgba(99,102,241,0.12);transition:transform .2s,box-shadow .2s;border:1px solid rgba(139,92,246,0.1);position:relative;overflow:hidden}
-      .card::before{content:"";position:absolute;top:-100px;right:-100px;width:200px;height:200px;background:radial-gradient(circle,rgba(139,92,246,0.08),transparent);border-radius:50%;pointer-events:none}
-      .card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(99,102,241,0.18)}
-      .cols{display:grid;grid-template-columns:1fr 380px;gap:1.2rem}
-      @media (max-width:900px){.cols{grid-template-columns:1fr}}
-      @media (max-width:640px){
-        section{margin-top:1rem}
-        .card{padding:1rem;border-radius:12px}
-      }
 
-      .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
-      @media (max-width:1000px){.features{grid-template-columns:repeat(2,1fr)}}
+      /* SECTIONS */      .card::before{content:"";position:absolute;top:-100px;right:-100px;width:200px;height:200px;background:radial-gradient(circle,rgba(139,92,246,0.08),transparent);border-radius:50%;pointer-events:none}
+
+      section{margin-top:1.5rem}      .card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(99,102,241,0.18)}
+
+      .card{background:linear-gradient(135deg, #ffffff 0%, #fefbff 100%);padding:1.3rem;border-radius:var(--radius);box-shadow:0 10px 40px rgba(99,102,241,0.12);transition:transform .2s,box-shadow .2s;border:1px solid rgba(139,92,246,0.1);position:relative;overflow:hidden}      .cols{display:grid;grid-template-columns:1fr 380px;gap:1.2rem}
+
+      .card::before{content:"";position:absolute;top:-100px;right:-100px;width:200px;height:200px;background:radial-gradient(circle,rgba(139,92,246,0.08),transparent);border-radius:50%;pointer-events:none}      @media (max-width:900px){.cols{grid-template-columns:1fr}}
+
+      .card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(99,102,241,0.18)}      @media (max-width:640px){
+
+      .cols{display:grid;grid-template-columns:1fr 380px;gap:1.2rem}        section{margin-top:1rem}
+
+      @media (max-width:900px){.cols{grid-template-columns:1fr}}        .card{padding:1rem;border-radius:12px}
+
+      @media (max-width:640px){      }
+
+        section{margin-top:1rem}
+
+        .card{padding:1rem;border-radius:12px}      .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+
+      }      @media (max-width:1000px){.features{grid-template-columns:repeat(2,1fr)}}
+
       @media (max-width:640px){.features{grid-template-columns:1fr}}
 
-      h2{margin:.2rem 0 .7rem 0;font-size:1.3rem;color:#1e293b;font-weight:700;position:relative;padding-left:.6rem}
-      h2::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--accent),var(--accent-2));border-radius:999px}
+      .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+
+      @media (max-width:1000px){.features{grid-template-columns:repeat(2,1fr)}}      h2{margin:.2rem 0 .7rem 0;font-size:1.3rem;color:#1e293b;font-weight:700;position:relative;padding-left:.6rem}
+
+      @media (max-width:640px){.features{grid-template-columns:1fr}}      h2::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--accent),var(--accent-2));border-radius:999px}
+
       h3{margin:.6rem 0 .4rem 0;font-size:1.05rem;color:#334155}
-      p.lead{color:var(--muted);margin:0 0 .8rem 0;font-size:1.02rem}
-      @media (max-width:640px){
-        h2{font-size:1.15rem}
+
+      h2{margin:.2rem 0 .7rem 0;font-size:1.3rem;color:#1e293b;font-weight:700;position:relative;padding-left:.6rem}      p.lead{color:var(--muted);margin:0 0 .8rem 0;font-size:1.02rem}
+
+      h2::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--accent),var(--accent-2));border-radius:999px}      @media (max-width:640px){
+
+      h3{margin:.6rem 0 .4rem 0;font-size:1.05rem;color:#334155}        h2{font-size:1.15rem}
+
+      p.lead{color:var(--muted);margin:0 0 .8rem 0;font-size:1.02rem}        h3{font-size:.98rem}
+
+      @media (max-width:640px){        p.lead{font-size:.96rem}
+
+        h2{font-size:1.15rem}      }
+
         h3{font-size:.98rem}
-        p.lead{font-size:.96rem}
-      }
 
-      ul{margin:.5rem 0;padding-left:1.2rem;color:var(--muted)}
-      li{margin:.4rem 0;line-height:1.6}
+        p.lead{font-size:.96rem}      ul{margin:.5rem 0;padding-left:1.2rem;color:var(--muted)}
+
+      }      li{margin:.4rem 0;line-height:1.6}
+
       @media (max-width:640px){
+
+      ul{margin:.5rem 0;padding-left:1.2rem;color:var(--muted)}        ul{padding-left:1rem}
+
+      li{margin:.4rem 0;line-height:1.6}        li{font-size:.95rem}
+
+      @media (max-width:640px){      }
+
         ul{padding-left:1rem}
-        li{font-size:.95rem}
-      }
 
-      /* Icon/badge */
-      .meta{font-size:.95rem;color:var(--muted);margin-top:.6rem}
+        li{font-size:.95rem}      /* Icon/badge */
+
+      }      .meta{font-size:.95rem;color:var(--muted);margin-top:.6rem}
+
       .badge{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;padding:.3rem .7rem;border-radius:999px;font-weight:700;font-size:.88rem;box-shadow:0 4px 12px rgba(99,102,241,0.3);animation:pulse 2s ease-in-out infinite}
-      @keyframes pulse{0%,100%{box-shadow:0 4px 12px rgba(99,102,241,0.3)} 50%{box-shadow:0 6px 20px rgba(99,102,241,0.5)}}
 
-      /* Form */
-      input,select,textarea,button{font-family:inherit}
+      /* Icon/badge */      @keyframes pulse{0%,100%{box-shadow:0 4px 12px rgba(99,102,241,0.3)} 50%{box-shadow:0 6px 20px rgba(99,102,241,0.5)}}
+
+      .meta{font-size:.95rem;color:var(--muted);margin-top:.6rem}
+
+      .badge{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;padding:.4rem .9rem;border-radius:999px;font-weight:700;font-size:.95rem;box-shadow:0 4px 12px rgba(99,102,241,0.3);animation:pulse 2s ease-in-out infinite}      /* Form */
+
+      @keyframes pulse{0%,100%{box-shadow:0 4px 12px rgba(99,102,241,0.3)} 50%{box-shadow:0 6px 20px rgba(99,102,241,0.5)}}      input,select,textarea,button{font-family:inherit}
+
       input,select{width:100%;padding:.7rem;border-radius:10px;border:1px solid #e2e8f0;margin-bottom:.6rem;font-size:.98rem;transition:border .2s}
-      input:focus,select:focus{outline:none;border-color:var(--accent)}
-      button[type=submit]{width:100%;padding:.75rem;border-radius:10px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(99,102,241,0.25);transition:transform .2s,box-shadow .2s}
-      button[type=submit]:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(99,102,241,0.35)}
 
-      footer{margin-top:3rem;padding:1.5rem 0;color:var(--muted);text-align:center;font-size:.92rem;border-top:1px solid #e2e8f0;background:linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.8))}
-      footer a{color:var(--accent)}
-    </style>
+      footer{margin-top:3rem;padding:1.5rem 0;color:var(--muted);text-align:center;font-size:.92rem;border-top:1px solid #e2e8f0;background:linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.8))}      input:focus,select:focus{outline:none;border-color:var(--accent)}
+
+      footer a{color:var(--accent)}      button[type=submit]{width:100%;padding:.75rem;border-radius:10px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(99,102,241,0.25);transition:transform .2s,box-shadow .2s}
+
+    </style>      button[type=submit]:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(99,102,241,0.35)}
+
   </head>
-  <body>
-    <header class="hero">
-      <div class="wrap inner">
-        <div style="max-width:700px;margin:0 auto;text-align:center">
-          <!-- Logo mejorado -->
-          <div style="margin-bottom:1.5rem">
-            <div style="display:inline-flex;align-items:center;justify-content:center;width:90px;height:90px;background:rgba(255,255,255,0.98);border-radius:24px;box-shadow:0 12px 32px rgba(0,0,0,0.25)">
-              <svg width="55" height="55" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#6366f1" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-          </div>
-          
-          <div class="badge" style="font-size:.95rem;padding:.4rem .9rem">✨ Clases virtuales de excelencia</div>
-          <h1 style="margin:1.2rem 0 .8rem 0;font-size:2.6rem;line-height:1.1">Refuerzo Académico Online</h1>
-          <p style="font-size:1.2rem;opacity:.95;font-weight:300;margin-bottom:1.5rem">Matemática · Química · Física</p>
-          
-          <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
-            <div style="text-align:center">
-              <div style="font-size:2rem;margin-bottom:.3rem">📚</div>
-              <div style="font-size:.9rem;opacity:.9;font-weight:600">Clases en vivo</div>
-            </div>
-            <div style="text-align:center">
-              <div style="font-size:2rem;margin-bottom:.3rem">✍️</div>
-              <div style="font-size:.9rem;opacity:.9;font-weight:600">Ayuda con tareas</div>
-            </div>
-            <div style="text-align:center">
+
+  <body>      footer{margin-top:3rem;padding:1.5rem 0;color:var(--muted);text-align:center;font-size:.92rem;border-top:1px solid #e2e8f0;background:linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.8))}
+
+    <header class="hero">      footer a{color:var(--accent)}
+
+      <div class="wrap inner">    </style>
+
+        <div style="max-width:700px;margin:0 auto;text-align:center">  </head>
+
+          <!-- Logo mejorado -->  <body>
+
+          <div style="margin-bottom:1.5rem">    <header class="hero">
+
+            <div style="display:inline-flex;align-items:center;justify-content:center;width:90px;height:90px;background:rgba(255,255,255,0.98);border-radius:24px;box-shadow:0 12px 32px rgba(0,0,0,0.25)">      <div class="wrap inner">
+
+              <svg width="55" height="55" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">        <div style="max-width:700px;margin:0 auto;text-align:center">
+
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#6366f1" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>          <!-- Logo mejorado -->
+
+                <path d="M2 17L12 22L22 17" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>          <div style="margin-bottom:1.5rem">
+
+                <path d="M2 12L12 17L22 12" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>            <div style="display:inline-flex;align-items:center;justify-content:center;width:90px;height:90px;background:rgba(255,255,255,0.98);border-radius:24px;box-shadow:0 12px 32px rgba(0,0,0,0.25)">
+
+              </svg>              <svg width="55" height="55" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            </div>                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#6366f1" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+          </div>                <path d="M2 17L12 22L22 17" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                          <path d="M2 12L12 17L22 12" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+          <div class="badge">✨ Clases virtuales de excelencia</div>              </svg>
+
+          <h1 style="margin:1.2rem 0 .8rem 0">Refuerzo Académico Online</h1>            </div>
+
+          <p style="margin-bottom:1.5rem">Matemática · Química · Física</p>          </div>
+
+                    
+
+          <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">          <div class="badge" style="font-size:.95rem;padding:.4rem .9rem">✨ Clases virtuales de excelencia</div>
+
+            <div style="text-align:center">          <h1 style="margin:1.2rem 0 .8rem 0;font-size:2.6rem;line-height:1.1">Refuerzo Académico Online</h1>
+
+              <div style="font-size:2rem;margin-bottom:.3rem">📚</div>          <p style="font-size:1.2rem;opacity:.95;font-weight:300;margin-bottom:1.5rem">Matemática · Química · Física</p>
+
+              <div style="font-size:.9rem;opacity:.9;font-weight:600">Clases en vivo</div>          
+
+            </div>          <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+
+            <div style="text-align:center">            <div style="text-align:center">
+
+              <div style="font-size:2rem;margin-bottom:.3rem">✍️</div>              <div style="font-size:2rem;margin-bottom:.3rem">📚</div>
+
+              <div style="font-size:.9rem;opacity:.9;font-weight:600">Ayuda con tareas</div>              <div style="font-size:.9rem;opacity:.9;font-weight:600">Clases en vivo</div>
+
+            </div>            </div>
+
+            <div style="text-align:center">            <div style="text-align:center">
+
+              <div style="font-size:2rem;margin-bottom:.3rem">🎯</div>              <div style="font-size:2rem;margin-bottom:.3rem">✍️</div>
+
+              <div style="font-size:.9rem;opacity:.9;font-weight:600">100% personalizado</div>              <div style="font-size:.9rem;opacity:.9;font-weight:600">Ayuda con tareas</div>
+
+            </div>            </div>
+
+          </div>            <div style="text-align:center">
+
               <div style="font-size:2rem;margin-bottom:.3rem">🎯</div>
-              <div style="font-size:.9rem;opacity:.9;font-weight:600">100% personalizado</div>
-            </div>
+
+          <div class="ctas" style="margin-top:2rem;justify-content:center">              <div style="font-size:.9rem;opacity:.9;font-weight:600">100% personalizado</div>
+
+            <a class="btn" href="#contacto">📱 Contactar ahora</a>            </div>
+
+            <a class="btn ghost" href="index.html">← Volver a inicio</a>          </div>
+
           </div>
 
-          <div class="ctas" style="margin-top:2rem;justify-content:center">
-            <a class="btn" href="#contacto" style="font-size:1.05rem;padding:.85rem 1.5rem">📱 Contactar ahora</a>
-            <a class="btn ghost" href="index.html" style="font-size:1.05rem;padding:.85rem 1.5rem">← Volver a inicio</a>
-          </div>
-        </div>
-      </div>
-    </header>
+        </div>          <div class="ctas" style="margin-top:2rem;justify-content:center">
 
-    <main class="wrap">
-      <section id="detalles">
-        <div class="card" style="background:linear-gradient(135deg, #fef3ff 0%, #eff6ff 100%);border-left:5px solid #a855f7">
+      </div>            <a class="btn" href="#contacto" style="font-size:1.05rem;padding:.85rem 1.5rem">📱 Contactar ahora</a>
+
+    </header>            <a class="btn ghost" href="index.html" style="font-size:1.05rem;padding:.85rem 1.5rem">← Volver a inicio</a>
+
+          </div>
+
+    <main class="wrap">        </div>
+
+      <section id="detalles">      </div>
+
+        <div class="card" style="background:linear-gradient(135deg, #fef3ff 0%, #eff6ff 100%);border-left:5px solid #a855f7">    </header>
+
           <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.8rem;flex-wrap:wrap">
-            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=200&h=200&q=80" alt="Clases virtuales" style="width:80px;height:80px;border-radius:12px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
-            <div style="flex:1;min-width:200px">
+
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=200&h=200&q=80" alt="Clases virtuales" style="width:80px;height:80px;border-radius:12px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.1)">    <main class="wrap">
+
+            <div style="flex:1;min-width:200px">      <section id="detalles">
+
+              <h2 style="margin:0 0 .3rem 0;color:#7c3aed">¿Cómo son las clases virtuales?</h2>        <div class="card" style="background:linear-gradient(135deg, #fef3ff 0%, #eff6ff 100%);border-left:5px solid #a855f7">
+
+              <p class="lead" style="margin:0">Clases en vídeo en directo a través de herramientas como Zoom o Google Meet. Cada sesión incluye explicación, pizarra digital y material descargable.</p>          <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.8rem;flex-wrap:wrap">
+
+            </div>            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=200&h=200&q=80" alt="Clases virtuales" style="width:80px;height:80px;border-radius:12px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+
+          </div>            <div style="flex:1;min-width:200px">
+
               <h2 style="margin:0 0 .3rem 0;color:#7c3aed">¿Cómo son las clases virtuales?</h2>
-              <p class="lead" style="margin:0">Clases en vídeo en directo a través de herramientas como Zoom o Google Meet. Cada sesión incluye explicación, pizarra digital y material descargable.</p>
-            </div>
-          </div>
 
-          <div class="features">
-            <div class="card" style="background:linear-gradient(135deg, #fef3ff 0%, #fce7f3 100%);border-left:4px solid #d946ef">
-              <h3 style="margin:0;color:#be185d">⏱️ Duración</h3>
+          <div class="features">              <p class="lead" style="margin:0">Clases en vídeo en directo a través de herramientas como Zoom o Google Meet. Cada sesión incluye explicación, pizarra digital y material descargable.</p>
+
+            <div class="card" style="background:linear-gradient(135deg, #fef3ff 0%, #fce7f3 100%);border-left:4px solid #d946ef">            </div>
+
+              <h3 style="margin:0;color:#be185d">⏱️ Duración</h3>          </div>
+
               <p class="meta">45–60 minutos por sesión. Paquetes flexibles.</p>
-            </div>
-            <div class="card" style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);border-left:4px solid #3b82f6">
-              <h3 style="margin:0;color:#1e40af">👥 Modalidad</h3>
-              <p class="meta">Clase individual o grupal reducida (máx. 5 alumnos).</p>
-            </div>
-            <div class="card" style="background:linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);border-left:4px solid #06b6d4">
-              <h3 style="margin:0;color:#0e7490">📚 Material</h3>
-              <p class="meta">Fichas, ejercicios resueltos y vídeos de repaso.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section style="margin-top:1rem">
-        <div class="cols">
-          <div>
+            </div>          <div class="features">
+
+            <div class="card" style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);border-left:4px solid #3b82f6">            <div class="card" style="background:linear-gradient(135deg, #fef3ff 0%, #fce7f3 100%);border-left:4px solid #d946ef">
+
+              <h3 style="margin:0;color:#1e40af">👥 Modalidad</h3>              <h3 style="margin:0;color:#be185d">⏱️ Duración</h3>
+
+              <p class="meta">Clase individual o grupal reducida (máx. 5 alumnos).</p>              <p class="meta">45–60 minutos por sesión. Paquetes flexibles.</p>
+
+            </div>            </div>
+
+            <div class="card" style="background:linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);border-left:4px solid #06b6d4">            <div class="card" style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);border-left:4px solid #3b82f6">
+
+              <h3 style="margin:0;color:#0e7490">📚 Material</h3>              <h3 style="margin:0;color:#1e40af">👥 Modalidad</h3>
+
+              <p class="meta">Fichas, ejercicios resueltos y vídeos de repaso.</p>              <p class="meta">Clase individual o grupal reducida (máx. 5 alumnos).</p>
+
+            </div>            </div>
+
+          </div>            <div class="card" style="background:linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);border-left:4px solid #06b6d4">
+
+        </div>              <h3 style="margin:0;color:#0e7490">📚 Material</h3>
+
+      </section>              <p class="meta">Fichas, ejercicios resueltos y vídeos de repaso.</p>
+
+            </div>
+
+      <section style="margin-top:1rem">          </div>
+
+        <div class="cols">        </div>
+
+          <div>      </section>
+
             <div class="card" style="background:linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);border-left:5px solid #f59e0b">
-              <div style="display:flex;gap:1rem;align-items:flex-start;margin-bottom:.6rem;flex-wrap:wrap">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=150&h=150&q=80" alt="Tareas" style="width:70px;height:70px;border-radius:10px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.08)">
-                <div style="flex:1;min-width:200px">
+
+              <div style="display:flex;gap:1rem;align-items:flex-start;margin-bottom:.6rem;flex-wrap:wrap">      <section style="margin-top:1rem">
+
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=150&h=150&q=80" alt="Tareas" style="width:70px;height:70px;border-radius:10px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.08)">        <div class="cols">
+
+                <div style="flex:1;min-width:200px">          <div>
+
+                  <h2 style="margin:0 0 .4rem 0;color:#d97706">✍️ Realizamos tareas y ejercicios</h2>            <div class="card" style="background:linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);border-left:5px solid #f59e0b">
+
+                  <p class="lead" style="margin:0">Si lo deseas, podemos ayudarte con tus tareas: las resolvemos explicando el procedimiento paso a paso y entregamos el material con la solución y la justificación.</p>              <div style="display:flex;gap:1rem;align-items:flex-start;margin-bottom:.6rem;flex-wrap:wrap">
+
+                </div>                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=150&h=150&q=80" alt="Tareas" style="width:70px;height:70px;border-radius:10px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.08)">
+
+              </div>                <div style="flex:1;min-width:200px">
+
                   <h2 style="margin:0 0 .4rem 0;color:#d97706">✍️ Realizamos tareas y ejercicios</h2>
-                  <p class="lead" style="margin:0">Si lo deseas, podemos ayudarte con tus tareas: las resolvemos explicando el procedimiento paso a paso y entregamos el material con la solución y la justificación. Es ideal para aprender correctamente, no solo para terminar la tarea.</p>
-                </div>
-              </div>
 
-              <h3 style="margin-top:.8rem;display:flex;align-items:center;gap:.4rem">
-                <span style="display:inline-block;width:8px;height:8px;background:#f59e0b;border-radius:50%"></span>
-                Cómo trabajamos las tareas
+              <h3 style="margin-top:.8rem;display:flex;align-items:center;gap:.4rem">                  <p class="lead" style="margin:0">Si lo deseas, podemos ayudarte con tus tareas: las resolvemos explicando el procedimiento paso a paso y entregamos el material con la solución y la justificación. Es ideal para aprender correctamente, no solo para terminar la tarea.</p>
+
+                <span style="display:inline-block;width:8px;height:8px;background:#f59e0b;border-radius:50%"></span>                </div>
+
+                Cómo trabajamos las tareas              </div>
+
               </h3>
-              <ul>
+
+              <ul>              <h3 style="margin-top:.8rem;display:flex;align-items:center;gap:.4rem">
+
+                <li>Envías la tarea antes de la sesión (por email o chat).</li>                <span style="display:inline-block;width:8px;height:8px;background:#f59e0b;border-radius:50%"></span>
+
+                <li>La resolvemos en la clase mostrando el proceso en la pizarra digital.</li>                Cómo trabajamos las tareas
+
+                <li>Te dejamos los apuntes y la solución para que repases.</li>              </h3>
+
+              </ul>              <ul>
+
                 <li>Envías la tarea antes de la sesión (por email o chat).</li>
-                <li>La resolvemos en la clase mostrando el proceso en la pizarra digital.</li>
-                <li>Te dejamos los apuntes y la solución para que repases.</li>
-              </ul>
 
-              <h3 style="margin-top:.8rem">⭐ Ventajas</h3>
-              <ul>
-                <li><strong style="color:#10b981">✓</strong> Aprendes el método, no solo el resultado.</li>
+              <h3 style="margin-top:.8rem">⭐ Ventajas</h3>                <li>La resolvemos en la clase mostrando el proceso en la pizarra digital.</li>
+
+              <ul>                <li>Te dejamos los apuntes y la solución para que repases.</li>
+
+                <li><strong style="color:#10b981">✓</strong> Aprendes el método, no solo el resultado.</li>              </ul>
+
                 <li><strong style="color:#10b981">✓</strong> Seguimiento personalizado según tu ritmo.</li>
+
+                <li><strong style="color:#10b981">✓</strong> Preparación para exámenes y prácticas.</li>              <h3 style="margin-top:.8rem">⭐ Ventajas</h3>
+
+              </ul>              <ul>
+
+            </div>                <li><strong style="color:#10b981">✓</strong> Aprendes el método, no solo el resultado.</li>
+
+          </div>                <li><strong style="color:#10b981">✓</strong> Seguimiento personalizado según tu ritmo.</li>
+
                 <li><strong style="color:#10b981">✓</strong> Preparación para exámenes y prácticas.</li>
-              </ul>
-            </div>
-          </div>
 
-          <aside>
-            <div class="card" style="background:linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);border:2px solid #d8b4fe">
-              <h2 style="color:#7c3aed">� Contáctanos Directamente</h2>
+          <aside>              </ul>
+
+            <div class="card" style="background:linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);border:2px solid #d8b4fe" id="contacto">            </div>
+
+              <h2 style="color:#7c3aed">💬 Contáctanos Directamente</h2>          </div>
+
               <p class="meta" style="margin-bottom:1.5rem">Elige tu forma favorita de comunicación</p>
-              
-              <!-- WhatsApp -->
-              <a href="https://wa.me/51987654321?text=Hola,%20quiero%20información%20sobre%20clases%20de%20refuerzo" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(37,211,102,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(37,211,102,0.4)'">
-                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">📱</div>
-                <div style="flex:1;text-align:left">
-                  <div style="font-weight:700;font-size:1.05rem">WhatsApp</div>
-                  <div style="font-size:.9rem;opacity:.9">+51 987 654 321</div>
+
+                        <aside>
+
+              <!-- WhatsApp -->            <div class="card" style="background:linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);border:2px solid #d8b4fe">
+
+              <a href="https://wa.me/51987654321?text=Hola,%20quiero%20información%20sobre%20clases%20de%20refuerzo" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(37,211,102,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(37,211,102,0.4)'">              <h2 style="color:#7c3aed">� Contáctanos Directamente</h2>
+
+                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">📱</div>              <p class="meta" style="margin-bottom:1.5rem">Elige tu forma favorita de comunicación</p>
+
+                <div style="flex:1;text-align:left">              
+
+                  <div style="font-weight:700;font-size:1.05rem">WhatsApp</div>              <!-- WhatsApp -->
+
+                  <div style="font-size:.9rem;opacity:.9">+51 987 654 321</div>              <a href="https://wa.me/51987654321?text=Hola,%20quiero%20información%20sobre%20clases%20de%20refuerzo" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(37,211,102,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(37,211,102,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(37,211,102,0.4)'">
+
+                  <div style="font-size:.85rem;opacity:.8">Respuesta inmediata</div>                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">📱</div>
+
+                </div>                <div style="flex:1;text-align:left">
+
+                <div style="font-size:1.5rem">→</div>                  <div style="font-weight:700;font-size:1.05rem">WhatsApp</div>
+
+              </a>                  <div style="font-size:.9rem;opacity:.9">+51 987 654 321</div>
+
                   <div style="font-size:.85rem;opacity:.8">Respuesta inmediata</div>
-                </div>
-                <div style="font-size:1.5rem">→</div>
-              </a>
 
-              <!-- Facebook Messenger -->
-              <a href="https://m.me/TU_PAGINA_FACEBOOK" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#0084ff,#0063cc);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(0,132,255,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(0,132,255,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(0,132,255,0.4)'">
-                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">💬</div>
+              <!-- Facebook Messenger -->                </div>
+
+              <a href="https://m.me/TU_PAGINA_FACEBOOK" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#0084ff,#0063cc);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(0,132,255,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(0,132,255,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(0,132,255,0.4)'">                <div style="font-size:1.5rem">→</div>
+
+                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">💬</div>              </a>
+
                 <div style="flex:1;text-align:left">
-                  <div style="font-weight:700;font-size:1.05rem">Facebook Messenger</div>
-                  <div style="font-size:.9rem;opacity:.9">Chat directo</div>
+
+                  <div style="font-weight:700;font-size:1.05rem">Facebook Messenger</div>              <!-- Facebook Messenger -->
+
+                  <div style="font-size:.9rem;opacity:.9">Chat directo</div>              <a href="https://m.me/TU_PAGINA_FACEBOOK" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#0084ff,#0063cc);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(0,132,255,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(0,132,255,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(0,132,255,0.4)'">
+
+                  <div style="font-size:.85rem;opacity:.8">Envía mensaje ahora</div>                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">💬</div>
+
+                </div>                <div style="flex:1;text-align:left">
+
+                <div style="font-size:1.5rem">→</div>                  <div style="font-weight:700;font-size:1.05rem">Facebook Messenger</div>
+
+              </a>                  <div style="font-size:.9rem;opacity:.9">Chat directo</div>
+
                   <div style="font-size:.85rem;opacity:.8">Envía mensaje ahora</div>
-                </div>
-                <div style="font-size:1.5rem">→</div>
-              </a>
 
-              <!-- Teléfono -->
-              <a href="tel:+51987654321" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(139,92,246,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(139,92,246,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(139,92,246,0.4)'">
-                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">📞</div>
+              <!-- Teléfono -->                </div>
+
+              <a href="tel:+51987654321" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(139,92,246,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(139,92,246,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(139,92,246,0.4)'">                <div style="font-size:1.5rem">→</div>
+
+                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">📞</div>              </a>
+
                 <div style="flex:1;text-align:left">
-                  <div style="font-weight:700;font-size:1.05rem">Llamar Ahora</div>
-                  <div style="font-size:.9rem;opacity:.9">+51 987 654 321</div>
+
+                  <div style="font-weight:700;font-size:1.05rem">Llamar Ahora</div>              <!-- Teléfono -->
+
+                  <div style="font-size:.9rem;opacity:.9">+51 987 654 321</div>              <a href="tel:+51987654321" style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:12px;text-decoration:none;color:white;margin-bottom:.8rem;box-shadow:0 4px 12px rgba(139,92,246,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(139,92,246,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(139,92,246,0.4)'">
+
+                  <div style="font-size:.85rem;opacity:.8">Lunes a Sábado 9am-8pm</div>                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">📞</div>
+
+                </div>                <div style="flex:1;text-align:left">
+
+                <div style="font-size:1.5rem">→</div>                  <div style="font-weight:700;font-size:1.05rem">Llamar Ahora</div>
+
+              </a>                  <div style="font-size:.9rem;opacity:.9">+51 987 654 321</div>
+
                   <div style="font-size:.85rem;opacity:.8">Lunes a Sábado 9am-8pm</div>
-                </div>
-                <div style="font-size:1.5rem">→</div>
-              </a>
 
-              <!-- Email -->
-              <a href="mailto:bautistachurasergio8@gmail.com?subject=Consulta%20sobre%20clases%20de%20refuerzo&body=Hola,%20quisiera%20información%20sobre%20las%20clases%20de%20refuerzo." style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#ec4899,#be185d);border-radius:12px;text-decoration:none;color:white;box-shadow:0 4px 12px rgba(236,72,153,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(236,72,153,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(236,72,153,0.4)'">
-                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">✉️</div>
+              <!-- Email -->                </div>
+
+              <a href="mailto:bautistachurasergio8@gmail.com?subject=Consulta%20sobre%20clases%20de%20refuerzo&body=Hola,%20quisiera%20información%20sobre%20las%20clases%20de%20refuerzo." style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#ec4899,#be185d);border-radius:12px;text-decoration:none;color:white;box-shadow:0 4px 12px rgba(236,72,153,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(236,72,153,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(236,72,153,0.4)'">                <div style="font-size:1.5rem">→</div>
+
+                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">✉️</div>              </a>
+
                 <div style="flex:1;text-align:left">
-                  <div style="font-weight:700;font-size:1.05rem">Email</div>
-                  <div style="font-size:.85rem;opacity:.9">bautistachurasergio8@gmail.com</div>
-                  <div style="font-size:.85rem;opacity:.8">Respuesta en 24h</div>
-                </div>
-                <div style="font-size:1.5rem">→</div>
-              </a>
 
-              <!-- Reference codes box -->
-              <div style="margin-top:1rem;padding:.8rem;background:linear-gradient(135deg,#fef3c7,#fed7aa);border-radius:10px;border:2px solid #fbbf24;box-shadow:0 2px 8px rgba(251,191,36,0.2)">
-                <p style="margin:0 0 .4rem 0;font-size:.88rem;font-weight:700;color:#92400e">🏷️ Códigos de referencia</p>
-                <div style="display:flex;gap:.4rem;flex-wrap:wrap">
-                  <span style="background:#dbeafe;color:#1e40af;padding:.35rem .6rem;border-radius:6px;font-family:monospace;font-size:.82rem;font-weight:700;border:1px solid #60a5fa">MAT-2025</span>
-                  <span style="background:#fef3c7;color:#92400e;padding:.35rem .6rem;border-radius:6px;font-family:monospace;font-size:.82rem;font-weight:700;border:1px solid #fbbf24">QUI-2025</span>
-                  <span style="background:#fce7f3;color:#9f1239;padding:.35rem .6rem;border-radius:6px;font-family:monospace;font-size:.82rem;font-weight:700;border:1px solid #f472b6">FIS-2025</span>
-                </div>
-                <p style="margin:.4rem 0 0;font-size:.8rem;color:#78350f">Menciona el código al contactar 📞</p>
-              </div>
-            </div>
-          </aside>
-                
-                <input name="telefono" type="tel" placeholder="WhatsApp / Teléfono" style="width:100%;padding:.7rem;border-radius:10px;border:2px solid #e9d5ff;margin-bottom:.6rem;font-size:.98rem;transition:border .2s" onfocus="this.style.borderColor='#a855f7'" onblur="this.style.borderColor='#e9d5ff'">
-                
-                <select name="curso" style="width:100%;padding:.7rem;border-radius:10px;border:2px solid #e9d5ff;margin-bottom:.7rem;font-size:.98rem;transition:border .2s" onfocus="this.style.borderColor='#a855f7'" onblur="this.style.borderColor='#e9d5ff'">
+                  <div style="font-weight:700;font-size:1.05rem">Email</div>              <!-- Email -->
+
+                  <div style="font-size:.85rem;opacity:.9">bautistachurasergio8@gmail.com</div>              <a href="mailto:bautistachurasergio8@gmail.com?subject=Consulta%20sobre%20clases%20de%20refuerzo&body=Hola,%20quisiera%20información%20sobre%20las%20clases%20de%20refuerzo." style="display:flex;align-items:center;gap:1rem;padding:1rem;background:linear-gradient(135deg,#ec4899,#be185d);border-radius:12px;text-decoration:none;color:white;box-shadow:0 4px 12px rgba(236,72,153,0.4);transition:all .3s" onmouseover="this.style.transform='translateX(5px)';this.style.boxShadow='0 6px 16px rgba(236,72,153,0.5)'" onmouseout="this.style.transform='translateX(0)';this.style.boxShadow='0 4px 12px rgba(236,72,153,0.4)'">
+
+                  <div style="font-size:.85rem;opacity:.8">Respuesta en 24h</div>                <div style="width:50px;height:50px;background:rgba(255,255,255,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.8rem">✉️</div>
+
+                </div>                <div style="flex:1;text-align:left">
+
+                <div style="font-size:1.5rem">→</div>                  <div style="font-weight:700;font-size:1.05rem">Email</div>
+
+              </a>                  <div style="font-size:.85rem;opacity:.9">bautistachurasergio8@gmail.com</div>
+
+            </div>                  <div style="font-size:.85rem;opacity:.8">Respuesta en 24h</div>
+
+          </aside>                </div>
+
+        </div>                <div style="font-size:1.5rem">→</div>
+
+      </section>              </a>
+
+
+
+      <section style="margin-top:1rem">              <!-- Reference codes box -->
+
+        <div class="card" style="background:linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);border-left:5px solid #06b6d4">              <div style="margin-top:1rem;padding:.8rem;background:linear-gradient(135deg,#fef3c7,#fed7aa);border-radius:10px;border:2px solid #fbbf24;box-shadow:0 2px 8px rgba(251,191,36,0.2)">
+
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">                <p style="margin:0 0 .4rem 0;font-size:.88rem;font-weight:700;color:#92400e">🏷️ Códigos de referencia</p>
+
+            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=100&h=100&q=80" alt="Precios" style="width:60px;height:60px;border-radius:10px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.08)">                <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+
+            <div style="flex:1;min-width:200px">                  <span style="background:#dbeafe;color:#1e40af;padding:.35rem .6rem;border-radius:6px;font-family:monospace;font-size:.82rem;font-weight:700;border:1px solid #60a5fa">MAT-2025</span>
+
+              <h2 style="margin:0 0 .4rem 0;color:#0891b2">💰 Precios y paquetes</h2>                  <span style="background:#fef3c7;color:#92400e;padding:.35rem .6rem;border-radius:6px;font-family:monospace;font-size:.82rem;font-weight:700;border:1px solid #fbbf24">QUI-2025</span>
+
+              <p class="lead" style="margin:0">Ofrecemos tarifas por hora y paquetes con descuento para seguimiento continuado.</p>                  <span style="background:#fce7f3;color:#9f1239;padding:.35rem .6rem;border-radius:6px;font-family:monospace;font-size:.82rem;font-weight:700;border:1px solid #f472b6">FIS-2025</span>
+
+            </div>                </div>
+
+          </div>                <p style="margin:.4rem 0 0;font-size:.8rem;color:#78350f">Menciona el código al contactar 📞</p>
+
+          <ul>              </div>
+
+            <li>Clase individual: 20€ / hora</li>            </div>
+
+            <li>Clase grupal (3-5): 12€ / hora por persona</li>          </aside>
+
+            <li>Paquete de 10h (individual): 180€</li>                
+
+          </ul>                <input name="telefono" type="tel" placeholder="WhatsApp / Teléfono" style="width:100%;padding:.7rem;border-radius:10px;border:2px solid #e9d5ff;margin-bottom:.6rem;font-size:.98rem;transition:border .2s" onfocus="this.style.borderColor='#a855f7'" onblur="this.style.borderColor='#e9d5ff'">
+
+        </div>                
+
+      </section>                <select name="curso" style="width:100%;padding:.7rem;border-radius:10px;border:2px solid #e9d5ff;margin-bottom:.7rem;font-size:.98rem;transition:border .2s" onfocus="this.style.borderColor='#a855f7'" onblur="this.style.borderColor='#e9d5ff'">
+
                   <option value="">Curso de interés</option>
-                  <option>📐 Matemáticas</option>
-                  <option>🧪 Química</option>
-                  <option>⚛️ Física</option>
-                  <option>📚 Varios cursos</option>
-                </select>
-                
-                <textarea name="mensaje" rows="2" placeholder="Mensaje adicional (opcional)" style="width:100%;padding:.7rem;border-radius:10px;border:2px solid #e9d5ff;margin-bottom:.7rem;font-size:.95rem;resize:vertical;transition:border .2s" onfocus="this.style.borderColor='#a855f7'" onblur="this.style.borderColor='#e9d5ff'"></textarea>
-                
-                <button type="submit" style="width:100%;padding:.8rem;border-radius:10px;border:none;background:linear-gradient(135deg,#6366f1,#a855f7);color:white;font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 4px 12px rgba(139,92,246,0.4);transition:all .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 16px rgba(139,92,246,0.5)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(139,92,246,0.4)'">✉️ Enviar solicitud</button>
-              </form>
 
-              <div style="margin-top:1rem;padding:.9rem;background:linear-gradient(135deg,#dcfce7,#d1fae5);border-radius:10px;border:2px solid #86efac;box-shadow:0 2px 8px rgba(34,197,94,0.2)">
-                <p style="margin:0 0 .6rem 0;font-weight:700;color:#166534;font-size:.95rem">� También por WhatsApp</p>
-                <a href="https://wa.me/51987654321?text=Hola,%20quiero%20información%20sobre%20clases" target="_blank" style="display:inline-block;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:.65rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:.95rem;box-shadow:0 3px 10px rgba(37,211,102,0.4);transition:transform .2s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📱 +51 987 654 321</a>
-                <p style="margin:.6rem 0 0;font-size:.85rem;color:#166534">Respuesta inmediata ⚡</p>
-              </div>
+      <section style="margin-top:1rem">                  <option>📐 Matemáticas</option>
 
-              <!-- Reference codes box -->
-              <div style="margin-top:1rem;padding:.8rem;background:linear-gradient(135deg,#fef3c7,#fed7aa);border-radius:10px;border:2px solid #fbbf24;box-shadow:0 2px 8px rgba(251,191,36,0.2)">
+        <div class="card" style="background:linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);border-left:5px solid #10b981">                  <option>🧪 Química</option>
+
+          <h2 style="color:#047857">❓ Preguntas frecuentes</h2>                  <option>⚛️ Física</option>
+
+          <ul>                  <option>📚 Varios cursos</option>
+
+            <li><strong>¿Qué plataforma usan?</strong> Normalmente Zoom o Google Meet; se envía enlace antes de la clase.</li>                </select>
+
+            <li><strong>¿Puedo pedir solo ayuda con tareas?</strong> Sí: ofrecemos sesiones enfocadas exclusivamente a la resolución de tareas con explicación.</li>                
+
+            <li><strong>¿Cómo pago?</strong> Transferencia, Bizum o pago online según lo acordado.</li>                <textarea name="mensaje" rows="2" placeholder="Mensaje adicional (opcional)" style="width:100%;padding:.7rem;border-radius:10px;border:2px solid #e9d5ff;margin-bottom:.7rem;font-size:.95rem;resize:vertical;transition:border .2s" onfocus="this.style.borderColor='#a855f7'" onblur="this.style.borderColor='#e9d5ff'"></textarea>
+
+          </ul>                
+
+        </div>                <button type="submit" style="width:100%;padding:.8rem;border-radius:10px;border:none;background:linear-gradient(135deg,#6366f1,#a855f7);color:white;font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 4px 12px rgba(139,92,246,0.4);transition:all .2s" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 16px rgba(139,92,246,0.5)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 12px rgba(139,92,246,0.4)'">✉️ Enviar solicitud</button>
+
+      </section>              </form>
+
+
+
+      <footer>              <div style="margin-top:1rem;padding:.9rem;background:linear-gradient(135deg,#dcfce7,#d1fae5);border-radius:10px;border:2px solid #86efac;box-shadow:0 2px 8px rgba(34,197,94,0.2)">
+
+        <div style="text-align:center">                <p style="margin:0 0 .6rem 0;font-weight:700;color:#166534;font-size:.95rem">� También por WhatsApp</p>
+
+          <small>© 2025 Clases de Refuerzo • Hecho con HTML y CSS • Tel: <a href="tel:+51987654321">+51 987 654 321</a></small>                <a href="https://wa.me/51987654321?text=Hola,%20quiero%20información%20sobre%20clases" target="_blank" style="display:inline-block;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:.65rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:.95rem;box-shadow:0 3px 10px rgba(37,211,102,0.4);transition:transform .2s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📱 +51 987 654 321</a>
+
+        </div>                <p style="margin:.6rem 0 0;font-size:.85rem;color:#166534">Respuesta inmediata ⚡</p>
+
+      </footer>              </div>
+
+    </main>
+
+  </body>              <!-- Reference codes box -->
+
+</html>              <div style="margin-top:1rem;padding:.8rem;background:linear-gradient(135deg,#fef3c7,#fed7aa);border-radius:10px;border:2px solid #fbbf24;box-shadow:0 2px 8px rgba(251,191,36,0.2)">
+
                 <p style="margin:0 0 .4rem 0;font-size:.88rem;font-weight:700;color:#92400e">🏷️ Códigos de referencia</p>
                 <div style="display:flex;gap:.4rem;flex-wrap:wrap">
                   <span style="background:#dbeafe;color:#1e40af;padding:.35rem .6rem;border-radius:6px;font-family:monospace;font-size:.82rem;font-weight:700;border:1px solid #60a5fa">MAT-2025</span>
