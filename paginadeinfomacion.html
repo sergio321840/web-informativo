@@ -15,17 +15,17 @@
       .wrap{max-width:var(--maxw);margin:0 auto;padding:1.2rem}
 
       /* HERO */
-      .hero{background:linear-gradient(135deg,#667eea 0%, #764ba2 100%);color:white;padding:3.5rem 1rem 3rem;border-radius:0 0 24px 24px;box-shadow:0 20px 60px rgba(102,126,234,0.3);position:relative;overflow:hidden}
-      .hero::before{content:"";position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.1),transparent);border-radius:50%}
-      .hero .inner{display:flex;gap:1.2rem;align-items:center;justify-content:space-between;flex-wrap:wrap;position:relative;z-index:1}
+      .hero{background:linear-gradient(135deg,#667eea 0%, #764ba2 100%);color:white;padding:4rem 1rem 3.5rem;border-radius:0 0 32px 32px;box-shadow:0 20px 60px rgba(102,126,234,0.3);position:relative;overflow:hidden}
+      .hero::before{content:"";position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.15),transparent);border-radius:50%}
+      .hero::after{content:"";position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.1),transparent);border-radius:50%}
+      .hero .inner{position:relative;z-index:1}
       .hero h1{margin:0;font-size:2.2rem;line-height:1.05;font-weight:700}
       .hero p{margin:.6rem 0 0;color:rgba(255,255,255,.93);max-width:58ch;font-size:1.05rem}
-      .hero .ctas{margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap}
+      .hero .ctas{margin-top:1.2rem;display:flex;gap:.8rem;flex-wrap:wrap}
       @media (max-width:768px){
-        .hero{padding:2.5rem 1rem 2rem;border-radius:0 0 18px 18px}
-        .hero h1{font-size:1.65rem}
-        .hero p{font-size:.98rem}
-        .hero .inner>div:last-child{text-align:left;margin-top:.8rem}
+        .hero{padding:3rem 1rem 2.5rem;border-radius:0 0 24px 24px}
+        .hero h1{font-size:1.8rem}
+        .hero p{font-size:1rem}
       }
       .btn{display:inline-block;background:white;color:var(--accent);padding:.7rem 1.2rem;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,0.12);transition:transform .2s,box-shadow .2s}
       .btn:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(0,0,0,0.15)}
@@ -87,31 +87,41 @@
   <body>
     <header class="hero">
       <div class="wrap inner">
-        <div style="max-width:640px">
-          <!-- Logo -->
-          <div style="margin-bottom:1rem">
-            <div style="display:inline-flex;align-items:center;justify-content:center;width:70px;height:70px;background:rgba(255,255,255,0.95);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,0.2)">
-              <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div style="max-width:700px;margin:0 auto;text-align:center">
+          <!-- Logo mejorado -->
+          <div style="margin-bottom:1.5rem">
+            <div style="display:inline-flex;align-items:center;justify-content:center;width:90px;height:90px;background:rgba(255,255,255,0.98);border-radius:24px;box-shadow:0 12px 32px rgba(0,0,0,0.25)">
+              <svg width="55" height="55" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#6366f1" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M2 17L12 22L22 17" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M2 12L12 17L22 12" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
           </div>
-          <div class="badge">Clases virtuales</div>
-          <h1>Clases de refuerzo online: Matemáticas, Química y Física</h1>
-          <p>Sesiones personalizadas en directo, ejercicios resueltos paso a paso y seguimiento semanal. También realizamos y revisamos tareas con explicaciones claras.</p>
-          <div class="ctas">
-            <a class="btn" href="index.html">Volver a inicio</a>
-            <a class="btn ghost" href="#detalles">Ver detalles</a>
+          
+          <div class="badge" style="font-size:.95rem;padding:.4rem .9rem">✨ Clases virtuales de excelencia</div>
+          <h1 style="margin:1.2rem 0 .8rem 0;font-size:2.6rem;line-height:1.1">Refuerzo Académico Online</h1>
+          <p style="font-size:1.2rem;opacity:.95;font-weight:300;margin-bottom:1.5rem">Matemática · Química · Física</p>
+          
+          <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+            <div style="text-align:center">
+              <div style="font-size:2rem;margin-bottom:.3rem">📚</div>
+              <div style="font-size:.9rem;opacity:.9;font-weight:600">Clases en vivo</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:2rem;margin-bottom:.3rem">✍️</div>
+              <div style="font-size:.9rem;opacity:.9;font-weight:600">Ayuda con tareas</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:2rem;margin-bottom:.3rem">🎯</div>
+              <div style="font-size:.9rem;opacity:.9;font-weight:600">100% personalizado</div>
+            </div>
           </div>
-        </div>
 
-        <div style="min-width:260px;text-align:right">
-          <div style="font-weight:700;font-size:1.05rem">📞 Atención directa</div>
-          <div class="meta" style="margin-top:.4rem">Tel: <a href="tel:+51987654321" style="color:white;text-decoration:underline;font-weight:600">+51 987 654 321</a></div>
-          <div class="meta">WhatsApp: <a href="https://wa.me/51987654321" target="_blank" rel="noopener" style="color:white;text-decoration:underline;font-weight:600">+51 987 654 321</a></div>
-          <div class="meta" style="margin-top:.5rem">✉️ Email: <a href="mailto:refuerzo@stem.edu.pe" style="color:white;text-decoration:underline">refuerzo@stem.edu.pe</a></div>
+          <div class="ctas" style="margin-top:2rem;justify-content:center">
+            <a class="btn" href="#contacto" style="font-size:1.05rem;padding:.85rem 1.5rem">📱 Contactar ahora</a>
+            <a class="btn ghost" href="index.html" style="font-size:1.05rem;padding:.85rem 1.5rem">← Volver a inicio</a>
+          </div>
         </div>
       </div>
     </header>
